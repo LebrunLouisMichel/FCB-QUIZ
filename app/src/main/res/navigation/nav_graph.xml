@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/spielFragment">
+
+    <fragment
+        android:id="@+id/spielFragment"
+        android:name="com.example.fcbquiz.ui.SpielFragment"
+        android:label="SpielFragment">
+        <action
+            android:id="@+id/action_spielFragment_to_ergebnisFragment"
+            app:destination="@id/ergebnisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ergebnisFragment"
+        android:name="com.example.fcbquiz.ui.ErgebnisFragment"
+        android:label="ergebnisFragment">
+        <argument
+            android:name="score"
+            app:argType="integer" />
+    </fragment>
+</navigation>
